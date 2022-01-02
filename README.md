@@ -99,4 +99,4 @@ SSH into the control node and follow the steps below:
 - _Update the /etc/ansible/hosts file to include the IP addresses of the webservers that you would like to install ELK on and the IP address of the ELK virtual machine._
 - _Run the playbook, and navigate to http://[Elk-Server External IP]:5601/app/kibana to ensure that the installation was successful._
 
-
+For detailed steps on the commands used and how to set this up, reference this document: https://github.com/zack6243/Elk-Stack-Project/blob/main/ConfigurationWriteUp.md
