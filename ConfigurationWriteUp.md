@@ -80,7 +80,7 @@ Destination Port: Custom 5601 HTTP
 
 **-** Download The Filebeat Configuration File
 
-_Command: curl https://github.com/SundownRider/Elk-Stack-Project/blob/main/Ansible/filebeat-configuration.yml_
+_Command: curl Ansible/filebeat-config.yml_
 
 **-** Edit The Filebeat Configuration File
 
