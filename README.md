@@ -14,7 +14,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   ![Filebeat-Config.yml](https://github.com/zack6243/Elk-Stack-Project/blob/main/Ansible/filebeat-config.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -30,8 +30,8 @@ Load balancing ensures that the application will be highly accessible, in additi
 Load balancers protect the availability aspect of security by ensuring that network traffic is distributed equally between two or more webservers so as not to overload a single server with more traffic than it can handle. Also, creating a jumpbox can be adventageous because one advantage of this system is the ability to effectively manage multiple webservers and/or programs individually and effeciently by making them accessible through a single gateway.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the server's logs and the system metrics.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- _Filebeat: Filebeat monitors the system logs and sends the output to a program that makes it easy to track, such as elasticsearch._
+- _Metricbeat: Metricbeat records system statistics and metrics. It also sends them to a program like elasticsearch._
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
