@@ -50,9 +50,9 @@ Enter The Following Into The Hosts File:
 
 **5. Configure The Elk Server Using The Elk Server Playbook**
 
-Playbook: install-elk.yml
+Playbook: elk-ansible.yml
 
-_Command: ansible-playbook install-elk.yml_
+_Command: ansible-playbook elk-ansible.yml_
 
 **6. Verify That The Elk Container Is Running**
 
@@ -94,7 +94,7 @@ Example: host: "10.2.0.4:5601"
 
 **-** Run The Filebeat Playbook
 
-_Command: ansible-playbook filebeat-playbook.yml_
+_Command: ansible-playbook filebeat-config.yml_
 
 **-** Verify The Installation
 
@@ -118,7 +118,7 @@ Example: host: "10.2.0.4:5601"
 
 **-** Run The Metricbeat Playbook
 
-_Command: ansible-playbook metricbeat-playbook.yml_
+_Command: ansible-playbook metricbeat-config.yml_
 
 **-** Verify The Installation
 
