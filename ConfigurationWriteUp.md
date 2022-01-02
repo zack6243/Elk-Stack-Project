@@ -30,9 +30,9 @@ _Commands To Drop Into Container:_
 
 **2.** sudo docker container list -a (Lists Containers)
 
-**3.** sudo docker start busy_mayer (Starts busy_mayer Container)
+**3.** sudo docker start (Your docker instance name) (Starts Docker Container)
 
-**4.** sudo docker attach busy_mayer (Drops Into busy_mayer Container)
+**4.** sudo docker attach (Your docker instance name) (Drops Into Docker Container)
 
 **-** Verify That You Can Connect To The Elk-Server VM From The Ansible Container
 
@@ -104,7 +104,7 @@ _Command: ansible-playbook filebeat-playbook.yml_
 
 **-** Download The Metricbeat Configuration File
 
-_Command: curl https://github.com/SundownRider/Elk-Stack-Project/blob/main/Ansible/metricbeat-configuration.yml_
+_Command: curl https://github.com/zack6243/Elk-Stack-Project/blob/main/Ansible/metricbeat-config.yml_
 
 **-** Edit The Metricbeat Configuration File
 
