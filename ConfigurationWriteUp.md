@@ -2,27 +2,27 @@
 
 **1. Add A New Virtual Network To The Red-Team Resource Group In A Different Region**
 
-**1.1** Name This Network Elk-Net
+**-** Name This Network Elk-Net
 
 **2. Add A New Peering To Allow Elk-Net and Red-Team-Net To Communicate**
 
-**2.1** Select Elk-Net > Peerings > Add A New Peering
+**-** Select Elk-Net > Peerings > Add A New Peering
 
-**2.2** Name The Peering Elk-Red and Name the Reverse Red-Elk
+**-** Name The Peering Elk-Red and Name the Reverse Red-Elk
 
-**2.3** Add Red-Team-Net as the Virtual Network That You Are Trying To Reach
+**-** Add Red-Team-Net as the Virtual Network That You Are Trying To Reach
 
 **3. Configure A New VM**
 
-**3.1** Name This New VM Elk-Server
+**-** Name This New VM Elk-Server
 
-**3.2** Select 4GB or 8GB of RAM
+**-** Select 4GB or 8GB of RAM
 
-**3.3** Place This Machine In The Red-Team Resource Group
+**-** Place This Machine In The Red-Team Resource Group
 
-**3.4** Configure The Back-End Login Using The SSH Public Key Of The Ansible Container
+**-** Configure The Back-End Login Using The SSH Public Key Of The Ansible Container
 
-**3.5** Drop Into The Ansible Container
+**-** Drop Into The Ansible Container
 
 _Commands To Drop Into Container:_
 
@@ -34,7 +34,7 @@ _Commands To Drop Into Container:_
 
 **4.** sudo docker attach busy_mayer (Drops Into busy_mayer Container)
 
-**3.6** Verify That You Can Connect To The Elk-Server VM From The Ansible Container
+**-** Verify That You Can Connect To The Elk-Server VM From The Ansible Container
 
 _Command: ssh RedAdmin@<Elk-Server IP>_
 
@@ -56,17 +56,17 @@ _Command: ansible-playbook install-elk.yml_
 
 **6. Verify That The Elk Container Is Running**
 
-**6.1** Log Into The Back End Of The Elk Server VM
+**-** Log Into The Back End Of The Elk Server VM
 
 _Command: ssh RedAdmin@<Elk-Server IP>_
 
-**6.2** Verify That The Elk Container Is Running Correctly
+**-** Verify That The Elk Container Is Running Correctly
 
 Command: sudo docker ps
 
 **7. Allow Your Host Machine To Access Elk-Server Over HTTP**
 
-**7.1** Add An Inbound Security Rule To Elk-Net
+**-** Add An Inbound Security Rule To Elk-Net
 
 Source IP: <Host Machine Public IP>
 
@@ -74,52 +74,52 @@ Destination Port: Custom 5601 HTTP
 
 **8. Verify That You Can Access The Elk-Server Over HTTP**
 
-**8.1** Navigate To http://[Elk-Server External IP]:5601/app/kibana
+**-** Navigate To http://[Elk-Server External IP]:5601/app/kibana
 
 **9. Install Filebeat**
 
-**9.1** Download The Filebeat Configuration File
+**-** Download The Filebeat Configuration File
 
 _Command: curl https://github.com/SundownRider/Elk-Stack-Project/blob/main/Ansible/filebeat-configuration.yml_
 
-**9.2** Edit The Filebeat Configuration File
+**-** Edit The Filebeat Configuration File
 
-**9.2.1** Scroll To Line 1106 and Replace The IP With Your Elk-Server IP (Elasticsearch)
+**-** Scroll To Line 1106 and Replace The IP With Your Elk-Server IP (Elasticsearch)
 
 Example: hosts: ["10.2.0.4:9200"]
 
-**9.2.2** Scroll To Line 1806 and Replace The IP With Your Elk-Server IP (Kibana)
+**-** Scroll To Line 1806 and Replace The IP With Your Elk-Server IP (Kibana)
 
 Example: host: "10.2.0.4:5601"
 
-**9.3** Run The Filebeat Playbook
+**-** Run The Filebeat Playbook
 
 _Command: ansible-playbook filebeat-playbook.yml_
 
-**9.4** Verify The Installation
+**-** Verify The Installation
 
-**9.4.1** Kibana Website > Logs > System Logs > Module Status > Select Check Data
+**-** Kibana Website > Logs > System Logs > Module Status > Select Check Data
 
 **10. Install Metricbeat**
 
-**10.1** Download The Metricbeat Configuration File
+**-** Download The Metricbeat Configuration File
 
 _Command: curl https://github.com/SundownRider/Elk-Stack-Project/blob/main/Ansible/metricbeat-configuration.yml_
 
-**10.2** Edit The Metricbeat Configuration File
+**-** Edit The Metricbeat Configuration File
 
-**10.2.1** Scroll To Line 1106 and Replace The IP With Your Elk-Server IP (Elasticsearch)
+**-** Scroll To Line 1106 and Replace The IP With Your Elk-Server IP (Elasticsearch)
 
 Example: hosts: ["10.2.0.4:9200"]
 
-**10.2.2** Scroll To Line 1806 and Replace The IP With Your Elk-Server IP (Kibana)
+**-** Scroll To Line 1806 and Replace The IP With Your Elk-Server IP (Kibana)
 
 Example: host: "10.2.0.4:5601"
 
-**10.3** Run The Metricbeat Playbook
+**-** Run The Metricbeat Playbook
 
 _Command: ansible-playbook metricbeat-playbook.yml_
 
-**10.4** Verify The Installation
+**-** Verify The Installation
 
-**10.4.1** Kibana Website > Metrics > System Metrics > Module Status > Select Check Data
+**-** Kibana Website > Metrics > System Metrics > Module Status > Select Check Data
