@@ -64,17 +64,19 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it minimizes the risk that the machines would be misconfigured or set up incorrectly.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- _ Install the Docker.io package_
+- _ Install Python3_
+- _ Install the Docker module using Python3_
+- _ Extend the amount of memory allocated to Docker_
+- _ Download and launch the Elk container using Docker_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![image](https://user-images.githubusercontent.com/83610301/147888158-1b3d25bf-d763-49ff-8b27-ddc5facffd0f.png)
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
