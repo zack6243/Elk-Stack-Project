@@ -89,7 +89,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - _Filebeat collects system logs and monitors network activity. These logs can be used to locate or detect unauthorized access or suspicious activity._
-- _Metricbeat collects system metrics which can identify performace issues on the network or issues with the server.
+- _Metricbeat collects system metrics which can identify performace issues on the network or issues with the server._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
