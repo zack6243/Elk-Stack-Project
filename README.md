@@ -67,11 +67,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it minimizes the risk that the machines would be misconfigured or set up incorrectly.
 
 The playbook implements the following tasks:
-- _ Install the Docker.io package_
-- _ Install Python3_
-- _ Install the Docker module using Python3_
-- _ Extend the amount of memory allocated to Docker_
-- _ Download and launch the Elk container using Docker_
+- _Install the Docker.io package_
+- _Install Python3_
+- _Install the Docker module using Python3_
+- _Extend the amount of memory allocated to Docker_
+- _Download and launch the Elk container using Docker_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -80,13 +80,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _Web-1: 10.0.0.5_
+- _Web-2: 10.0.0.6_
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- _Filebeat_
+- _Metricbeat_
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _Filebeat collects system logs and monitors network activity. These logs can be used to locate or detect unauthorized access or suspicious activity._
+- _Metricbeat collects system metrics which can identify performace issues on the network or issues with the server.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
