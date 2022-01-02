@@ -76,7 +76,7 @@ Destination Port: Custom 5601 HTTP
 
 8.1 Navigate To http://[Elk-Server External IP]:5601/app/kibana
 
-**9. Install Filebeat **
+**9. Install Filebeat**
 
 9.1 Download The Filebeat Configuration File
 
